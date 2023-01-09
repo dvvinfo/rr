@@ -1,0 +1,41 @@
+block sidebar
+
+    .sidebar
+        .logo 
+            img.logo__img(src="./img/logo.png", alt="")
+        .profile
+            .profile__img-wrapper 
+                img.profile__img(src="./img/profil.png", alt="")
+            h3.profile__name Александр Дворецкий
+            span.profile__status Это текст моего серого статуса
+            .profile__description Я очень люблю искуcство, красивые вещи и дизайн. Сейчас я не знаю, что писать и пишу просто маленькими серыми буквами.
+            .profile__rating
+                span.profile__rating-text Рейтинг: 
+                span.profile__rating-number 97
+            button.btn.btn-blue Отправить сообщение
+            .profile__block Вы и Александр друзья
+            .profile-info 
+                .profile-info__item 
+                    a(href="#").profile-info__block
+                        span.profile-info__number 123 
+                        span.profile-info__text записи
+                    a(href="#").profile-info__block
+                        span.profile-info__number 531 
+                        span.profile-info__text комментарий 
+                .profile-info__item 
+                    a(href="#").profile-info__block
+                        span.profile-info__number 76 
+                        span.profile-info__text друзей 
+                    a(href="#").profile-info__block
+                        span.profile-info__number 729 
+                        span.profile-info__text подписчиков 
+            .social-network
+                button.social-network__btn
+                    a(href="#").social-network__link
+                        img.social-network__img(src="./img/Facebook.svg", alt="Facebook")
+                button.social-network__btn
+                    a(href="#").social-network__link
+                        img.social-network__img(src="./img/VK.png", alt="VK")
+                button.social-network__btn
+                    a(href="#").social-network__link
+                        img.social-network__img(src="./img/Twitter.png", alt="Twitter")
