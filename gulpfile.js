@@ -8,7 +8,7 @@ const dist = "dist/";
 
 const config = {
   app: {
-    html: app + "pug/index.pug",
+    html: app + "pug/pages/*.pug",
     style: app + "scss/**/*.scss",
     js: app + "js/**/*.*",
     fonts: app + "fonts/**/*.*",
