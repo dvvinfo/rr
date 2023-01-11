@@ -1,0 +1,29 @@
+block sing-in-form
+    .sing-up-form 
+        .sing-up-form__header 
+            h1.sing-up-form__title ProofPeople
+            .sing-up-form__description ProofPeople — социальная сеть с блогоконтекстом. Для тех, кто ценит время и простоту.
+        .sing-up-form__body 
+            form(action="#") 
+                .sing-up-form__item
+                    input.form-control(type="email" name="email" id="email" placeholder="Введите email" required)
+                .sing-up-form__item.pb-3
+                    input.form-control(type="password" name="password" id="password" placeholder="Введите пароль" required)
+                    .form-check
+                        input.form-check-input(type="checkbox" name="text" id="text")
+                        label.form-label.form-label-check(for="text") Запомнить              
+                button.btn.btn-up Войти
+        .sing-up-form__footer.pb-4 
+            a.sing-up-form__link(href="#") Зарегистрироваться?
+        .sing-up-form__block 
+            span.sing-up-form__name Войти с помощью:
+            .social-network
+                button.social-network__btn
+                    a(href="#").social-network__link
+                        img.social-network__img(src="./img/Facebook.svg", alt="Facebook")
+                button.social-network__btn
+                    a(href="#").social-network__link
+                        img.social-network__img(src="./img/VK.png", alt="VK")
+                button.social-network__btn
+                    a(href="#").social-network__link
+                        img.social-network__img(src="./img/Twitter.png", alt="Twitter")

@@ -1,0 +1,21 @@
+block sing-up-form
+    .sing-up-form 
+        .sing-up-form__header 
+            h1.sing-up-form__title ProofPeople
+            .sing-up-form__description ProofPeople — здесь писать краткое описание проэкта в несколько строк.
+        .sing-up-form__body 
+            form(action="#") 
+                .sing-up-form__item
+                    input.form-control(type="text" name="name" id="name" placeholder="Введите имя" required)
+                .sing-up-form__item
+                    input.form-control(type="text" name="surname" id="surname" placeholder="Введите фамилию" required)
+                .sing-up-form__item
+                    input.form-control(type="email" name="email" id="email" placeholder="Введите email" required)
+                    .sing-up-form__message Email используется для подтверждения аккаунта
+                .sing-up-form__item
+                    input.form-control(type="password" name="password" id="password" placeholder="Введите пароль" required)
+                .sing-up-form__item
+                    input.form-control(type="password" name="repeat_password" id="repeat-password" placeholder="Повторите пароль" required)
+                button.btn.btn-login Зарегистрироваться
+        .sing-up-form__footer
+            a.sing-up-form__link(href="#") Войти

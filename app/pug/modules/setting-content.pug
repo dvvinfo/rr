@@ -1,0 +1,44 @@
+block setting-content
+    .setting-content
+        form.form(action="#")
+            .form__block
+                label.form-label(for="name") Имя:
+                input.form-control(type="text" name="name" id="name" placeholder="Александр" required)
+            .form__block
+                label.form-label(for="surname") Фамилия:
+                input.form-control(type="text" name="surname" id="surname" placeholder="Дворецкий"  required)
+            .form__block 
+                label.form-label(for="gender") Пол:
+                select.form-select(id="gender" name="gender" required)
+                    option.selected( value="men") Мужской
+                    option( value="women") Женский
+            .form__block.mb-0 
+                label.form-label.label-data(for="") Дата рождения:
+                select.form-select.day(id="day" name="day" required)
+                    option.selected( value="01") 01
+                    option( value="02") 02
+                select.form-select.month(id="month" name="month" required)
+                    option.selected( value="1") январь
+                    option( value="2") февраль
+                select.form-select.year(id="year" name="year" required)
+                    option.selected( value="1990") 1990
+                    option( value="1990") 1991
+            .form-check
+                input.form-check-input(type="checkbox" name="text" id="text")
+                label.form-label.form-label-check(for="text") Показывать дату рожения пользователям
+            .form__block 
+                label.form-label(for="city") Город:
+                select.form-select(id="city" name="city" required)
+                    option.selected( value="01") Florø
+                    option( value="02") Florø
+            .form__block 
+                label.form-label(for="country") Страна:
+                select.form-select(id="country" name="country" required)
+                    option.selected( value="01") Норвегия
+                    option( value="02") Россия
+            .form__block 
+                label.form-label(for="tel") Моб. телефон:
+                input.form-control(type="text" name="tel" id="tel" placeholder="+47 912 21 530" required)
+            .form__block-text 
+                a.form__link(href="#") Интеграция с соц. сетями
+            button.btn.btn-form Сохранить
