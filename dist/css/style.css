@@ -18831,6 +18831,8 @@ textarea.form-control-lg {
   max-width: 403px;
   width: 100%;
   background-color: #e2e1e4;
+  background: url(../img/form-bg.png) no-repeat center;
+  background-size: cover;
   border-radius: 10px;
 }
 .sing-up-form__header {
