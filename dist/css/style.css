@@ -18215,7 +18215,7 @@ textarea.form-control-lg {
 }
 
 .wrapper-bg {
-  background: url(../img/Picture-BG.webp) no-repeat;
+  background: url(../img/Picture-BG.webp) no-repeat center;
   background-size: cover;
   width: 100%;
   height: 100vh;
