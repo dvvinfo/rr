@@ -1,0 +1,19 @@
+doctype html
+html(lang="en")
+    head
+        include ../modules/head
+    body
+        .wrapper
+            .container-fluid
+                include ../modules/header-post
+                .post-wrapper
+                    .row.g-0
+                        .col-4.w-2
+                            include ../modules/sidebar-post
+                        .col-8.w-10
+                            .content.post-content
+                                include ../modules/post-category
+                                include ../modules/post-content
+                                include ../modules/comments
+        include ../modules/scripts
+                        

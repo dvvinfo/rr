@@ -44,7 +44,6 @@
   height: 100vh;
   background: $white-profile;
   border-right: 1px solid rgba(232, 232, 232, 1);
-  margin-right: 38px;
 }
 .logo {
   padding-top: 22px;
@@ -396,6 +395,15 @@
 .posts-small-list {
   border: 1px solid rgba(232, 232, 232, 1);
   border-radius: 5px;
+  &__heading {
+    font-size: 18px;
+    margin-top: 25px;
+    margin-left: 22px;
+    margin-bottom: 0;
+    color: rgb(44, 105, 144);
+    text-transform: uppercase;
+  }
+
   &__item {
     display: flex;
     padding: 18px;
@@ -447,6 +455,7 @@
 // sidebar-posts
 
 .sidebar-posts {
+  background-color: #fff;
   .posts-small-list {
     border: none;
     border-radius: 0;
@@ -496,6 +505,7 @@
 .sticky {
   position: sticky;
   top: 0;
+  z-index: 5;
 }
 .posts-feed {
   .posts-profile__name {
@@ -700,7 +710,7 @@
       box-shadow: 0 0 0 0.25rem rgb(124 193 117 / 25%);
     }
   }
-  .btn-up{
+  .btn-up {
     width: 100%;
     background-color: rgba(159, 191, 213, 1);
     color: $white;
@@ -740,7 +750,7 @@
       background-color: rgb(105, 159, 195);
     }
   }
-  &__block{
+  &__block {
     max-width: 280px;
     width: 100%;
     margin: 0 auto;
@@ -748,17 +758,395 @@
     border-top: 1px solid #c5c5c6;
     text-align: center;
   }
-  &__name{
+  &__name {
     padding-bottom: 23px;
     display: block;
     font-size: 18px;
-    color:#828282 ;
+    color: #828282;
   }
+}
+// post
+
+.header-post {
+  background-color: rgb(246, 246, 246);
+  .header__content {
+    padding: 22px 0;
+    height: 74px;
+  }
+}
+.post-wrapper {
+  padding: 0 100px;
+}
+.sidebar-post {
+  background-color: rgb(246, 246, 246);
+  border: none;
+  padding-top: 38px;
+  max-width: 380px;
+  .posts-small-list .posts-small-list__item:last-child{
+border-bottom: none;
+  }
+}
+.border-post {
+  border-width: 1px;
+  border-color: rgb(232, 232, 232);
+  border-style: solid;
+  border-radius: 5px;
+  background-color: rgb(251, 251, 251);
+}
+.subscribe {
+  padding-bottom: 35px;
+  &__btn {
+    width: 100%;
+    border-radius: 6px;
+    background:  rgb( 120, 167, 198 ) ;
+    height: 44px;
+    border: none;
+    &:hover {
+      background-color: #94beda;
+    }
+  }
+  &__link {
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-shadow: 0px 1px 0px rgb(60, 117, 152);
+    text-decoration: none;
+  }
+  .subscribe__btn:hover {
+    .subscribe__link {
+      color: rgb(255, 255, 255);
+    }
+  }
+}
+.subscribe-block {
+  background-color: rgb(251, 251, 251);
+  border-width: 1px;
+      border-color: rgb(232, 232, 232);
+      border-style: solid;
+      border-radius: 5px;
+  padding: 25px;
+  &__title {
+    font-size: 18px;
+    color: rgb(44, 105, 144);
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+  &__input {
+    padding: 25px 0;
+    .form-control {
+      border-width: 1px;
+      border-color: rgb(232, 232, 232);
+      border-style: solid;
+      border-radius: 5px;
+      font-size: 18px;
+      color: rgb(103, 103, 103);
+    }
+  }
+}
+.btn-subscribe{
+    border-radius: 6px;
+    background:  rgb( 120, 167, 198 ) ;
+    height: 44px;
+    width: 100%;
+      font-size: 18px;
+      color: rgb( 255, 255, 255 );
+      text-align: center;
+      text-shadow: 0px 1px 0px rgb( 60, 117, 152 );
+    &:hover{
+      color: rgb( 255, 255, 255 );
+      background-color: #94beda;
+    }
+  
+}
+.post-content {
+  padding: 40px 0 40px 0;
+}
+.post-content-wrapper {
+  border-width: 1px;
+  border-color: rgb(232, 232, 232);
+  border-style: solid;
+  border-radius: 5px;
+  background-color: rgb(251, 251, 251);
+  padding: 50px 50px 0 50px;
+  margin-top: 35px;
+}
+.post-block {
+  text-align: center;
+  border-width: 1px;
+  border-color: rgb(232, 232, 232);
+  border-style: solid;
+  border-radius: 5px;
+  background-color: rgb(251, 251, 251);
+  padding: 40px;
+  &__heading {
+    font-size: 16px;
+    color: #2c6990;
+    text-transform: uppercase;
+  }
+  &__title {
+    font-size: 30px;
+    color: rgb(29, 29, 29);
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+  &__profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    &::before {
+      content: "";
+      top: -10px;
+      width: 155px;
+      height: 1px;
+      position: absolute;
+      background-color: rgb(232, 232, 232);
+    }
+    .posts-profile {
+      border-top: none;
+    }
+    .posts__count {
+      margin-right: 15px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  &__btn-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 36px;
+  }
+}
+.post-content__text {
+  font-size: 20px;
+  color: rgb(29, 29, 29);
+  line-height: 1.55;
+  padding: 30px 0;
+}
+.post-quote {
+  display: flex;
+  &__img-wrapper {
+    margin-right: 30px;
+  }
+  &__text {
+    font-size: 24px;
+    color: rgb(88, 123, 147);
+    font-style: italic;
+    line-height: 1.292;
+  }
+}
+.post-tags{
+  border-top: 1px solid rgb(232, 232, 232);
+  border-bottom: 1px solid rgb(232, 232, 232);
+  padding: 25px 0;
+  display: flex;
+  &__title{
+      font-size: 20px;
+      color: rgb( 155, 155, 155 );
+      line-height: 1.55;
+      padding-right: 3px;
+  }
+  &__link {
+      font-size: 20px;
+      line-height: 1.55;
+      color: rgb( 125, 161, 185 );  
+      display: block;
+      margin-right: 5px;
+      text-underline-offset: 4px;
+    
+  }
+}
+.post-share {
+  padding: 25px 0;
+  display: flex;
+  align-items: center;
+  &__title{
+    font-size: 20px;
+      color: rgb( 155, 155, 155 );
+      line-height: 1.55;
+  }
+  &__btn {
+    margin-left: 30px;
+  }
+}
+
+//comments
+
+.comments {
+  padding: 30px 50px ;
+  border-width: 1px;
+    border-color: rgb(232, 232, 232);
+    border-style: solid;
+    border-radius: 5px;
+    background-color: rgb(251, 251, 251);
+    margin-top: 35px;
+    width: 100%;
+  &__header {
+      font-size: 18px;
+      color: rgb( 44, 105, 144 );
+      line-height: 1.722;
+      margin-bottom: 25px;
+      text-transform: uppercase;
+    
+  }
+  &__form{
+    padding: 25px 0;
+    border-top: 1px solid rgb(232, 232, 232);
+    border-radius: 5px;
+    display: flex;
+  }
+  &__avatar{
+      width: 68px;
+      height: 68px;
+      border-radius: 100%;
+      margin-right: 18px;
+      flex-shrink: 0;
+    
+  }
+  &__img{
+    width: 100%;
+    height: auto;
+    border-radius: 100%;
+  }
+  .form-control{
+    width: 100%;
+  }
+  form {
+    width: 100%;
+  }
+  &__footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 18px;
+  }
+  .btn-comments{
+      border-radius: 6px;
+      background: rgb( 120, 167, 198 );
+      width: 150px;
+      height: 44px;
+        font-size: 18px;
+        color: rgb( 255, 255, 255 );
+        text-shadow: 0px 1px 0px rgb( 60, 117, 152 );
+        &:hover{
+          background: #98bdd5;
+        }
+  }
+}
+
+// file
+
+.input__wrapper {
+  position: relative;
+  margin: 15px 0;
+  text-align: center;
+  cursor: pointer;
+}
+ 
+.input__file {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  width: 110px;
+}
+ 
+.input__file-button-text {
+  line-height: 1;
+  margin-top: 1px;
+}
+ 
+.input__file-button {
+  width: 110px;
+    font-size: 18px;
+    color: rgb( 44, 105, 144 );
+  margin: 0 auto;
+  cursor: pointer;
+  text-decoration: dashed underline rgb( 125, 161, 185 )
+}
+
+.comments-item{
+  padding: 25px 0;
+  border-top: 1px solid rgb(232, 232, 232);
+  border-radius: 5px;
+  display: flex;
+  &__avatar{
+    width: 68px;
+    height: 68px;
+    border-radius: 100%;
+    margin-right: 18px;
+    flex-shrink: 0;
+  
+}
+&__img{
+  width: 100%;
+  height: auto;
+  border-radius: 100%;
+}
+&__header {
+  display: flex;
+  align-items: center;
+}
+&__name{
+    font-size: 18px;
+    color: rgb( 44, 105, 144 );
+    text-decoration: none;
+  
+}
+&__date{
+    font-size: 16px;
+    color: rgb( 155, 155, 155 );
+    padding-left: 20px;
+}
+&__message{
+    font-size: 18px;
+    color: rgb( 29, 29, 29 );
+    line-height: 1.389;
+    padding: 15px 0;
+  
+}
+&__link {
+    font-size: 18px;
+    color: rgb( 131, 131, 131 );
+    line-height: 1.389;
+}
+&__text{
+  font-size: 16px;
+    color: rgb( 155, 155, 155 );
+    padding-left: 13px;
+    padding-right: 7px;
+}
+&__answer-name{
+  font-size: 16px;
+    color: rgb( 155, 155, 155 );
+    text-decoration: dashed underline rgb( 155, 155, 155 );
+    text-underline-offset: 4px;
+}
+}
+.post-search{
+    border-width: 1px;
+    border-color: rgb( 196, 196, 196 );
+    border-style: solid;
+    border-radius: 8px;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    .input-img{
+      padding: 0;
+    }
 }
 
 //media
 
 @media screen and (min-width: 1500px) {
+  .post-content {
+    padding: 40px 0 40px 40px;
+}
   .w-2 {
     width: 16.66%;
   }

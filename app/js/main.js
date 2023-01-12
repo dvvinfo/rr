@@ -1,5 +1,5 @@
 const sidebarFixed = document.querySelector(".sidebar-fixed");
-const header = document.querySelector(".header ");
+const header = document.querySelector(".header-fixed ");
 
 if (sidebarFixed  ) {
   window.addEventListener("scroll", scroll);

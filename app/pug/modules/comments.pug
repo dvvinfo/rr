@@ -1,0 +1,39 @@
+block comments
+    .comments
+        .comments__header 
+            h4.comments__title 57 комментариев 
+        .comments__form 
+            .comments__avatar 
+                img.comments__img(src="./img/comments-avatar1.png", alt="")
+            form(action="#",enctype="multipart/form-data") 
+                textarea.form-control#message-text(placeholder="Напишите комментарий")
+                .comments__footer 
+                    button.btn.btn-comments Отправить 
+                    .input__wrapper
+                        input#input__file.input.input__file(type="file", name="input__file")
+                        label.input__file-button(for="input__file") 
+                            span.input__file-button-text Прикрепить
+        .comments-item
+            .comments-item__avatar 
+                img.comments-item__img(src="./img/comments-avatar2.png", alt="") 
+            .comments-item__content 
+                .comments-item__header 
+                    a(href="#").comments-item__name Георгий Поздняков
+                    span.comments-item__date 23.09.13
+                .comments-item__message Очень хороший текст, которой объясняет очень многое о простоте и современной дизайне.
+                .comments-item__footer
+                    a.comments-item__link(href="#") Ответить
+        .comments-item.comments-answer
+            .comments-item__avatar 
+                img.comments-item__img(src="./img/comments-avatar3.png", alt="") 
+            .comments-item__content 
+                .comments-item__header 
+                    a(href="#").comments-item__name Георгий Поздняков
+                    span.comments-item__text Ответил
+                    a(href="#").comments-item__answer-name Георгию
+                    span.comments-item__date 23.09.13
+                .comments-item__message Спасибо! Вы можете посмотреть другие мои статьи.
+                .comments-item__footer
+                    a.comments-item__link(href="#") Ответить
+        
+
