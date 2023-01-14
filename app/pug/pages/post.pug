@@ -8,12 +8,15 @@ html(lang="en")
                 include ../modules/header-post
                 .post-wrapper
                     .row.g-0
-                        .col-4.w-2
+                        .col-3.w-2
                             include ../modules/sidebar-post
-                        .col-8.w-10
+                        .col-9.w-10
                             .content.post-content
                                 include ../modules/post-category
-                                include ../modules/post-content
-                                include ../modules/comments
+                                .content__block 
+                                    .block
+                                        include ../modules/post-content
+                                        include ../modules/comments
+                                    include ../modules/right-block
         include ../modules/scripts
                         

@@ -11,9 +11,23 @@ block post-category
                 a(href="#").category__link никто    
             li.category__item 
                 a(href="#").category__link когда
-        span.category__block
+        span.category__block#category-open
             <i class="bi bi-three-dots"></i>
-        form(action="#").search-form
+        .category-hidden
+            button.btn.category-btn-close
+                i.bi.bi-x
+            ul.category__nav 
+                li.category__item 
+                    a(href="#").category__link ниочем
+                li.category__item 
+                    a(href="#").category__link нечто
+                li.category__item 
+                    a(href="#").category__link ктото
+                li.category__item 
+                    a(href="#").category__link никто    
+                li.category__item 
+                    a(href="#").category__link когда
+        form(action="#").search-form.search-form-form
             .input-wrapper.post-search 
                 span.input-img 
                     <i class="bi bi-search"></i>
