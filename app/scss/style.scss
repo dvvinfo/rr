@@ -101,6 +101,7 @@
     padding: 12px;
     border-radius: 10px;
     margin-top: 21px;
+    margin: 21px auto 0 auto;
     font-size: 18px;
     color: #868686;
   }
@@ -1426,7 +1427,10 @@ stroke: #000;
     display: none;
   }
   .profile {
-    padding: 40px 21px 12px 16px;
+    padding: 40px 16px 12px 16px;
+}
+.posts{
+  padding-right: 0;
 }
 .btn-close{
   display: block;
