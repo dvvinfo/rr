@@ -15,7 +15,6 @@ block header
                 a(href="#").icons-block__item 
                     <i class="bi bi-heart-fill"></i>
             .avatar-wrapper
-                span.avatar-name Вася Пупкин
                 svg.avatar-icon(width='15' height='37' viewbox='0 0 22 37' fill='none' xmlns='http://www.w3.org/2000/svg')
                     path(d='M19.9688 2.00049L2.99825 18.5843L19.9688 35.168' stroke='#7aa8c7' stroke-width='4')
                 .avatar 
@@ -28,6 +27,12 @@ block header
                 span.icons-block__item#search-icon 
                     <i class="bi bi-search"></i>
             ul.nav-mobile
+                button.btn.nav-mobile__btn-close
+                    i.bi.bi-x
+                .user-mobile 
+                    span.user-mobile__name Александ Дворецкий
+                    .user-mobile__avatar 
+                        img.user-mobile__img(src="./img/profil.png", alt="")
                 a(href="#").icons-block__item
                     span.icons-block__text Профиль 
                     i.bi.bi-person-fill

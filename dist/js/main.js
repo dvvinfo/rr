@@ -15,6 +15,8 @@ const categoryHidden = document.querySelector(".category-hidden");
 const categoryBtnClose = document.querySelector(".category-btn-close");
 const categoryOpen = document.querySelector("#category-open");
 const navMobile = document.querySelector(".nav-mobile");
+const navBtnClose = document.querySelector('.nav-mobile__btn-close')
+const btnCloseRightBlock = document.querySelector(".btn-close-right-block")
 
 if (sidebarFixed) {
   window.addEventListener("scroll", scroll);
@@ -44,6 +46,11 @@ if (avatarWrapper) {
     sidebar.classList.toggle("sidebar-show");
   });
 }
+if (navBtnClose) {
+  navBtnClose.addEventListener('click', () => {
+    navMobile.classList.remove("nav-mobile-show");
+  })  
+}
 // if (profile) {
 //   profile.addEventListener('click', () => {
 //     sidebar.classList.toggle('sidebar-show')
@@ -68,6 +75,11 @@ if (burger) {
   burger.addEventListener("click", () => {
     rightBlock.classList.toggle("right-block-show");
   });
+}
+if (btnCloseRightBlock) {
+  btnCloseRightBlock.addEventListener("click",() => {
+    rightBlock.classList.remove("right-block-show");
+  })
 }
 
 if (categoryOpen) {
