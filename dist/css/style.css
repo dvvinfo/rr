@@ -19757,7 +19757,7 @@ textarea.form-control-lg {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     position: fixed;
     padding: 20px;
     top: 0;
