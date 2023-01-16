@@ -19359,6 +19359,10 @@ textarea.form-control-lg {
   display: none;
 }
 
+.burger-person {
+  display: none;
+}
+
 .btn-close {
   display: none;
 }
@@ -19428,6 +19432,14 @@ textarea.form-control-lg {
 .selected-wrapper {
   display: flex;
   align-items: center;
+}
+
+.posts-btn-close {
+  display: none;
+}
+
+.btn-close-profile {
+  display: none;
 }
 
 @media screen and (min-width: 1900px) {
@@ -19564,8 +19576,30 @@ textarea.form-control-lg {
   }
 }
 @media screen and (max-width: 768px) {
+  .btn-close-profile {
+    position: absolute;
+    display: block;
+    top: 15px;
+    left: 10px;
+    font-size: 25px;
+    padding: 0;
+    color: #9bbbd2;
+    transform: rotate(90deg);
+  }
+  .posts-btn-close {
+    display: block;
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    font-size: 30px;
+    padding: 0;
+    color: #9bbbd2;
+  }
   .sidebar-posts {
-    padding-top: 100px;
+    padding-top: 70px;
+  }
+  .pt-custom {
+    padding-top: 0;
   }
   .post-content .right-block {
     display: block;
@@ -19606,7 +19640,7 @@ textarea.form-control-lg {
     display: flex;
     align-items: center;
     position: relative;
-    z-index: 5;
+    z-index: 2;
   }
   .avatar {
     margin: 0;
@@ -19681,6 +19715,17 @@ textarea.form-control-lg {
     transform: translateX(150%);
     box-shadow: 0.5px 4.33px 5px 0px rgb(0, 0, 0);
   }
+  .profile-hidden {
+    right: auto;
+    left: 0;
+    opacity: 0;
+    transform: translateX(-150%);
+  }
+  .profile-show {
+    transform: translateX(0);
+    opacity: 1;
+    z-index: 4;
+  }
   .sidebar {
     max-width: 555px;
   }
@@ -19701,6 +19746,11 @@ textarea.form-control-lg {
     display: none;
   }
   .burger {
+    display: block;
+    color: rgb(0, 0, 0);
+    font-size: 22px;
+  }
+  .burger-person {
     display: block;
     color: rgb(0, 0, 0);
     font-size: 22px;
@@ -19781,7 +19831,7 @@ textarea.form-control-lg {
     align-items: center;
     padding: 0;
     margin-bottom: 15px;
-    margin-left: 20px;
+    margin-left: 15px;
     font-size: 21px;
   }
   .nav-mobile .icons-block__item:last-child {
@@ -19829,15 +19879,14 @@ textarea.form-control-lg {
     width: 50px;
     height: 50px;
     border-radius: 100%;
+    margin-left: 20px;
   }
   .user-mobile__img {
     width: 50px;
     height: 50px;
     border-radius: 100%;
-    margin-left: 20px;
   }
-  .user-mobile__name .Александр_Дворецкий {
-    font-size: 25px;
+  .user-mobile__name {
     color: rgb(0, 0, 0);
   }
   .btn-close-right-block {
@@ -19852,6 +19901,15 @@ textarea.form-control-lg {
     margin-top: 50px;
     margin-left: 20px;
     margin-right: 20px;
+  }
+  .sidebar-post {
+    display: none;
+  }
+  .nav-mobile .icons-block__text {
+    display: flex;
+    order: 1;
+    padding-left: 20px;
+    padding-right: 0;
   }
 }
 @media screen and (max-width: 576px) {
