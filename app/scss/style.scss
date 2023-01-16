@@ -1795,6 +1795,7 @@
   .nav-mobile {
     max-width: 340px;
     width: 100%;
+    height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1933,6 +1934,8 @@
   }
   .form .form-label-check {
     margin-bottom: 0;
+    margin-right: 0;
+    font-size: 14px;
   }
   .form__block {
     -webkit-box-orient: vertical;
@@ -2071,6 +2074,11 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .posts-profile__avatar{
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    font-size: 23px;
   }
 }
 @media screen and (max-width: 440px) {

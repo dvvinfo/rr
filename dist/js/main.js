@@ -121,6 +121,18 @@ document.addEventListener("click", (e) => {
   }
 });
 
+document.addEventListener("click", (e) => {
+  if (
+    !e.target.closest(".category-hidden") &&
+    !e.target.closest(".category__block")
+  ) {
+    if(categoryHidden){
+      categoryHidden.classList.remove("category-open");
+    }
+    
+  }
+});
+
 // document.addEventListener('click', (e) => {
 //   const click = e.composedPath().includes(navMobile)
 //   console.log(click)
